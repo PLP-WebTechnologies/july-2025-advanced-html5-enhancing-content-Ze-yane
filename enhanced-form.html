@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Form HTML</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+    header{
+      background-color: seagreen;
+      color: white;
+      text-align: center;
+    }
+    nav ul{
+     list-style: none;
+     display: flex;
+     padding: 0;
+     gap: 15px
+     margin: 0;
+     background: whitesmoke;
+     justify-content: space-around;
+    }
+    nav a{
+      text-decoration: none;
+      color: lightseagreen;
+      font-weight: bold;
+    }
+    table{
+      width: 100%;
+    }
+    th, td{
+    text-align: left;  
+    padding: 0.5rem;
+    }
+    form{
+      background: whitesmoke;
+      padding: 1rem;
+      border-radius: 7px;
+    }
+    fieldset{
+      border: 1px solid black;
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    legend{
+      font-weight: bold;
+    }
+    label{
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select, textarea{
+      width: 100%;
+      padding: 6px;
+      margin-top: 3px;
+      box-sizing: border-box;
+    }
+    header, nav, main, footer{
+    padding: 1rem;
+    margin: auto;
+    max-width: 600px;
+    }
+    button{
+      background: lightseagreen;
+      font-weight: bold;
+      padding: 6px;
+    }
+    footer{
+      text-align: center;
+      padding: 0.6rem;
+      background: seagreen;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Welcome to Your Favourite Cake Website</h1>
+  <p>You're undecided on the flavour of cake you want? Don't worry we've got you covered.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#cake-image">Cakes</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#feedback">Feedbacks</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>You're undecided on the flavor of cake you want? Don't worry, we've got you covered! Whether you're a fan of classic vanilla, rich chocolate, or fruity strawberry, there's a perfect cake flavor out there for you. Take your time, and let's explore the options together. What's your sweet tooth craving?</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Cake Customization</li>
+      <li>Flavor Selection Guidance</li>
+      <li>Personalized Cake Solutions</li>
+    </ul>
+    
+    <section>
+      <table border="1">
+        <caption><h3>Services Subscription Price</h3></caption>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Duration</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cake Customization</td>
+            <td>Per Cake</td>
+            <td>#5,000</td>
+          </tr>
+          <tr>
+            <td>Flavor Selection Guidance</td>
+            <td>1 month</td>
+            <td>#8,000</td>
+          </tr>
+          <tr>
+            <td>Personlized Cake Solutions</td>
+            <td>1 Year</td>
+            <td>#50,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+  <section id="cake">
+    <h2>Cakes</h2>
+    <p>A sweet baked deserts.</p>
+    <img src="./july4-cake.jpg" alt="cake image" width="350" height="360">
+    <p>Different flavors to choose from🤤.</p>
+    <video controls width="350" height="360">
+      <source src="./cake.mp4" type="video/mp4">
+      Your browser does not support audio element
+    </video>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required minlength="4" placeholder="Enter your full name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <label for="phone">Phone Number:</label>
+       <input type="tel" id="phone" name="phone"  placeholder="+1234567890" pattern="\+?\d{10,15}" required>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Service Needed:</legend>
+        
+        <label for="service">Service Type:</label>
+        <select id="service" name="service" required>
+          <option value="">--Please Choose--</option>
+          <option value="cake-customization">Cake Customization</option>
+          <option value="flavor-selection-guidance">Flavor Selection Guidance</option>
+          <option value="personalized-cake-solutions">Personalized Cake Solutions</option>
+        </select>
+        <label for="budget">Estimated budget:</label>
+        <input type="number" id="budget" name="budget" min="5000" max="100000" required>
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" name="deadline" required>
+      </fieldset>
+      
+      <button type="submit">Contact Us</button>
+    </form>
+  </section>
+  
+  <section id="feedback">
+    <form action="#" method="post" autocomplete="off">
+      <fieldset>
+        <legend>Feedback</legend>
+        
+        <label for="service-rendered">Service Rendered:</label>
+        <select id="service" name="service" required>
+          <option value="">--Please Choose--</option>
+          <option value="cake-customization">Cake Customization</option>
+          <option value="flavor-selection-guidance">Flavor Selection Guidance</option>
+          <option value="personalized-cake-solutions">Personalized Cake Solutions</option>
+        </select>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write down your opinoin on our services" maxlength="100"></textarea>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer>© 2025 Your Favorite Cake Website</footer>
+</body>
+
+</html>
